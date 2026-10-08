@@ -1,0 +1,162 @@
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ---------- Estructura con Grid (escritorio) ---------- */
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+/* ---------- Panel azul ---------- */
+.panel-azul {
+    background-color: #0057E7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel-azul h1 {
+    color: white;
+    font-size: 32px;
+}
+
+/* ---------- Panel del login ---------- */
+.panel-login {
+    background-color: #F7F7F7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caja-login {
+    width: 100%;
+    max-width: 360px;
+    padding: 20px;
+}
+
+.caja-login h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #1a1a3d;
+    margin: 0 0 10px 0;
+}
+
+.subtitulo {
+    font-size: 12px;
+    color: #888888;
+    margin: 0 0 30px 0;
+}
+
+/* ---------- Formulario (solo diseño) ---------- */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.etiqueta {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.campo {
+    padding: 14px;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 13px;
+    color: #999999;
+}
+
+.olvido {
+    font-size: 11px;
+    color: #0057E7;
+    text-align: right;
+    margin: 0;
+}
+
+.boton {
+    width: 45%;
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #0057E7;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* El "Sign Up" no se ve en escritorio */
+.registro {
+    display: none;
+}
+
+/* ---------- Media query: tableta ---------- */
+@media (max-width: 1024px) {
+    .panel-azul h1 {
+        font-size: 26px;
+    }
+
+    .caja-login {
+        max-width: 300px;
+    }
+
+    .caja-login h2 {
+        font-size: 22px;
+    }
+}
+
+/* ---------- Media query: móvil ---------- */
+@media (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-azul {
+        display: none;
+    }
+
+    .panel-login {
+        align-items: flex-start;
+    }
+
+    .caja-login {
+        max-width: 100%;
+        padding: 60px 20px;
+    }
+
+    .etiqueta {
+        display: none;
+    }
+
+    .boton {
+        width: 100%;
+    }
+
+    .registro {
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        color: #888888;
+        margin: 0;
+    }
+
+    .registro span {
+        color: #0057E7;
+        font-weight: bold;
+    }
+}
